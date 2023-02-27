@@ -75,7 +75,7 @@ extension PostFeedListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostFeedListTableViewCell.reuseIdentifier) as? PostFeedListTableViewCell,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostFeedListTableViewCell.reuseIdentifier, for: indexPath) as? PostFeedListTableViewCell,
               let posts = viewModel?.posts
         else {
             return UITableViewCell()
